@@ -1,6 +1,12 @@
 <template>
-  <div class="mod-user">
-    <el-form :inline="true" :model="queryUser" style="padding-top: 10px">
+  <div class="mod-user" style="padding-top: 20px">
+    <el-breadcrumb separator-class="el-icon-arrow-right" style="padding: 0 0 0 20px">
+      <el-breadcrumb-item :to="{ path: '/index' }">首页</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/user-list' }">用户管理</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/user-list' }">用户列表</el-breadcrumb-item>
+    </el-breadcrumb>
+    <el-divider></el-divider>
+    <el-form :inline="true" :model="queryUser" style="padding: 0 0 0 10px">
       <el-form-item style="width: 130px">
         <el-input v-model="queryUser.uid" placeholder="UID" clearable></el-input>
       </el-form-item>
@@ -39,7 +45,7 @@
       </el-form-item>
       <el-form-item style="float: right;">
         <el-button type="primary" @click="isQuery = true">查询</el-button>
-        <el-button type="success">新增</el-button>
+        <el-button type="success" @click="$router.push('/user-add')">新增</el-button>
         <el-button type="danger" @click="deleteSelects()">批量删除</el-button>
       </el-form-item>
     </el-form>
@@ -47,6 +53,7 @@
         :data="getDataList"
         border
         stripe
+        size="medium"
         @selection-change="selectionChangeHandle"
         style="width: 100%;">
       <el-table-column
@@ -118,7 +125,8 @@
           width="150"
           label="操作">
         <template slot-scope="scope">
-          <el-button type="text">修改</el-button>
+          <el-button type="text" @click="modifyUser(scope.row.uid)">修改
+          </el-button>
           <el-button type="text" @click="deleteSelects(scope.row.uid)">删除</el-button>
         </template>
       </el-table-column>
@@ -130,6 +138,7 @@
         :page-sizes="[5, 8, 10, 20, 50, 100]"
         :page-size="pageSize"
         :total="totalData"
+        style="margin: 5px 0 0 10px"
         layout="total, sizes, prev, pager, next, jumper">
     </el-pagination>
   </div>
@@ -155,8 +164,6 @@ export default {
       queryUser: {
         uid: '',
         name: '',
-        begin: '',
-        end: '',
         gender: '',
         role: '',
         status: ''
@@ -182,16 +189,18 @@ export default {
       }],
       statusOptions: [{
         value: 1,
-        label: '限制登录'
+        label: '正常'
       }, {
         value: 2,
-        label: '正常'
+        label: '限制登录'
       }]
     }
   },
   computed: {
     // 获取数据列表
     getDataList() {
+      console.log('computed');
+
       let res = []
       let index = 0
       let that = this
@@ -203,7 +212,7 @@ export default {
         this.queryList = this.userList.filter(
             v => {
               return v.name.includes(queryUser.name) && v.uid.includes(queryUser.uid)
-                  &&  v.gender.toString().includes(queryUser.gender) && v.status.toString().includes(queryUser.status)
+                  && v.gender.toString().includes(queryUser.gender) && v.status.toString().includes(queryUser.status)
                   && v.role.toString().includes(queryUser.role)
             }
         )
@@ -222,7 +231,9 @@ export default {
             index++
           }
       )
+      console.log(this.userList);
       this.queryList = this.userList
+      console.log(res);
       return res
     },
     totalData() {
@@ -259,6 +270,9 @@ export default {
           }
       )
     },
+    modifyUser(modifyUid) {
+      this.$router.push({path: '/user-update', query: {uid: modifyUid}})
+    },
     genderFormat(scope) {
       if (scope.gender === 1) {
         return '男'
@@ -281,9 +295,9 @@ export default {
     },
     statusFormat(scope) {
       if (scope.status === 1) {
-        return '限制登录'
-      } else if (scope.status === 2) {
         return '正常'
+      } else if (scope.status === 2) {
+        return '限制登录'
       } else {
         return '无对应状态'
       }
@@ -291,3 +305,7 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+
+</style>

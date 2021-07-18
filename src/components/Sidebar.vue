@@ -5,14 +5,14 @@
 <template>
   <el-container>
     <el-aside width="200px" style="background-color: rgba(238, 241, 246, 0.1)">
-      <el-menu :default-openeds="[]">
-          <el-menu-item style="text-align: center" index="0-1" @click="$router.push('/index')">XXX后台系统</el-menu-item>
+      <el-menu :default-openeds="['1']">
+        <el-menu-item style="text-align: center" index="0-1" @click="$router.push('/index')">蜜雪冰城甜蜜蜜</el-menu-item>
         <el-submenu index="1">
           <template slot="title"><i class="el-icon-user-solid"></i>用户管理</template>
           <el-menu-item-group>
             <el-menu-item index="1-1" @click="$router.push('/user-list')">用户列表</el-menu-item>
-            <el-menu-item index="1-2">增加用户</el-menu-item>
-            <el-menu-item index="1-3">修改用户</el-menu-item>
+            <el-menu-item index="1-2" @click="$router.push('/user-add')">添加用户</el-menu-item>
+            <el-menu-item index="1-3" @click="$router.push('/user-update')">修改用户</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
@@ -52,7 +52,3 @@
     <router-view/>
   </el-container>
 </template>
-
-<script>
-export default {}
-</script>

@@ -79,6 +79,7 @@ export default {
 <style scoped>
 .container {
   background: url("https://www.mxbc.com/media/upload/index/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8Ebanner1920x900.jpg") no-repeat;
+  background-size:cover;
   width: 100%;
   height: 100vh;
   position: relative;

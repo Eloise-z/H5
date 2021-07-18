@@ -20,6 +20,14 @@ const routes = [
             {
                 path: '/user-list',
                 component: () => import(/* webpackChunkName: "user" */ "../views/user/UserList")
+            },
+            {
+                path: '/user-add',
+                component: () => import(/* webpackChunkName: "user" */ "../views/user/AddUser")
+            },
+            {
+                path: '/user-update',
+                component: () => import(/* webpackChunkName: "user" */ "../views/user/ModifyUser")
             }
         ]
     },
@@ -35,11 +43,8 @@ const router = new VueRouter({
     routes
 })
 
-// 去 personal 中的页面时要判断是否登录
 router.beforeEach((to, from, next) => {
-    const personal = ['/index'];
-    // true 表示需要检查是否登录
-    if (personal.includes(to.fullPath)) {
+    if (to.fullPath !== '/login') {
         // 从session中获取用户信息
         const userInfo = sessionStorage.getItem('EloiseUserLoginSession');
         // 有数据，说明登录了的
