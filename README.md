@@ -1,5 +1,7 @@
 # eloise
 
+## 所有数据均为静态，数据文件在 src / api /
+
 ## Project setup
 ```
 npm install
@@ -14,7 +16,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### 所有数据均为静态
-
-### 数据文件在 src / api /
