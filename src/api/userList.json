@@ -23,7 +23,7 @@
       "name": "name0",
       "gender": 2,
       "role": 2,
-      "status": 2,
+      "status": 1,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
     },
@@ -32,16 +32,16 @@
       "name": "test0",
       "gender": 2,
       "role": 2,
-      "status": 2,
+      "status": 1,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
     },
     {
       "uid": "10005",
       "name": "name",
-      "gender": 2,
+      "gender": 3,
       "role": 1,
-      "status": 2,
+      "status": 1,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
     },
@@ -59,7 +59,7 @@
       "name": "name1",
       "gender": 3,
       "role": 2,
-      "status": 2,
+      "status": 1,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
     },
@@ -68,7 +68,7 @@
       "name": "name2",
       "gender": 3,
       "role": 2,
-      "status": 2,
+      "status": 1,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
     },
@@ -85,7 +85,7 @@
       "uid": "10010",
       "name": "name4",
       "gender": 1,
-      "role": 1,
+      "role": 2,
       "status": 2,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
@@ -94,7 +94,7 @@
       "uid": "10011",
       "name": "qwe",
       "gender": 3,
-      "role": 1,
+      "role": 2,
       "status": 1,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
@@ -130,7 +130,7 @@
       "uid": "10015",
       "name": "wef3",
       "gender": 3,
-      "role": 1,
+      "role": 2,
       "status": 2,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
@@ -139,7 +139,7 @@
       "uid": "10016",
       "name": "daw2",
       "gender": 2,
-      "role": 1,
+      "role": 2,
       "status": 1,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"
@@ -175,7 +175,7 @@
       "uid": "10020",
       "name": "fw3s",
       "gender": 2,
-      "role": 1,
+      "role": 2,
       "status": 2,
       "createTime": "2021-07-16 22:50:40",
       "updateTime": "2021-07-16 22:51:40"

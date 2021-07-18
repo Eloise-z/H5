@@ -28,6 +28,10 @@ const routes = [
             {
                 path: '/user-update',
                 component: () => import(/* webpackChunkName: "user" */ "../views/user/ModifyUser")
+            },
+            {
+                path: '/user-report',
+                component: () => import(/* webpackChunkName: "user" */ "../views/user/UserReport")
             }
         ]
     },

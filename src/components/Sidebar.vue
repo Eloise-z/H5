@@ -13,6 +13,7 @@
             <el-menu-item index="1-1" @click="$router.push('/user-list')">用户列表</el-menu-item>
             <el-menu-item index="1-2" @click="$router.push('/user-add')">添加用户</el-menu-item>
             <el-menu-item index="1-3" @click="$router.push('/user-update')">修改用户</el-menu-item>
+            <el-menu-item index="1-3" @click="$router.push('/user-report')">用户统计</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
