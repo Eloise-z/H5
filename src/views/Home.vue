@@ -3,12 +3,11 @@
 *Date: 2021-07-16 15:11
 -->
 <template>
-    <div class="myHome" style="background-color: gainsboro; padding-top: 100px; width: 100%; height: 85vh">
-<!--      <h1 style="font-size: 60px; text-align: center; color: white"> 欢迎{{ username }}来到 蜜雪冰城甜蜜蜜 后台系统！</h1>-->
-      <h1 style="font-size: 60px; text-align: center; color: white"> 欢迎{{ username }}</h1>
-      <h1 style="font-size: 60px; text-align: center; color: white"> 来到 蜜雪冰城甜蜜蜜 后台系统！</h1>
-      <p style="text-align: center; font-size: 30px; color: white">{{ nowDate }}</p>
-    </div>
+  <div class="myHome">
+    <h1 class="myH1"> 欢迎{{ username }}</h1>
+    <h1 class="myH1"> 来到 蜜雪冰城甜蜜蜜 后台系统！</h1>
+    <p class="myP">{{ nowDate }}</p>
+  </div>
 </template>
 
 <script>
@@ -59,8 +58,24 @@ export default {
 
 <style scoped>
 .myHome {
-  height: 100vh;
+  padding-top: 100px;
+  width: 100%;
+  height: 85vh;
   background: url("https://www.mxbc.com/media/upload/banner/1920x500-pc%E7%AB%AF%E4%BA%A7%E5%93%81%E5%B1%95%E7%A4%BA.jpg") no-repeat;
   background-size: cover;
+}
+
+.myH1 {
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  background: #008FEF
+}
+
+.myP {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  background: #008FEF
 }
 </style>

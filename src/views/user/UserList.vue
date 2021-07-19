@@ -125,8 +125,7 @@
           width="150"
           label="操作">
         <template slot-scope="scope">
-          <el-button type="text" @click="modifyUser(scope.row.uid)">修改
-          </el-button>
+          <el-button type="text" @click="modifyUser(scope.row.uid)">修改</el-button>
           <el-button type="text" @click="deleteSelects(scope.row.uid)">删除</el-button>
         </template>
       </el-table-column>
