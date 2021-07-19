@@ -93,7 +93,7 @@ export default {
     }
   },
   methods: {
-    // 修改新闻
+    // 修改
     modifyNews() {
       this.$message.success('修改商品成功！')
       this.$router.push('/goods-list')

@@ -35,9 +35,8 @@
         <el-submenu index="4">
           <template slot="title"><i class="el-icon-s-order"></i>订单管理</template>
           <el-menu-item-group>
-            <el-menu-item index="4-1">订单列表</el-menu-item>
-            <el-menu-item index="4-2">添加订单</el-menu-item>
-            <el-menu-item index="4-3">修改订单</el-menu-item>
+            <el-menu-item index="4-1" @click="$router.push('/order-list')">订单列表</el-menu-item>
+            <el-menu-item index="4-2" @click="$router.push('/order-detail')">订单详情</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="5">
