@@ -19,9 +19,9 @@
         <el-submenu index="2">
           <template slot="title"><i class="el-icon-s-goods"></i>商品管理</template>
           <el-menu-item-group>
-            <el-menu-item index="2-1">商品列表</el-menu-item>
-            <el-menu-item index="2-2">添加商品</el-menu-item>
-            <el-menu-item index="2-3">修改商品</el-menu-item>
+            <el-menu-item index="2-1" @click="$router.push('/goods-list')">商品列表</el-menu-item>
+            <el-menu-item index="2-2" @click="$router.push('/goods-add')">添加商品</el-menu-item>
+            <el-menu-item index="2-3" @click="$router.push('/goods-update')">修改商品</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="3">
