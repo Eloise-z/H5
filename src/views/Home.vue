@@ -4,9 +4,11 @@
 -->
 <template>
   <div class="myHome">
-    <h1 class="myH1"> 欢迎{{ username }}</h1>
-    <h1 class="myH1"> 来到 蜜雪冰城甜蜜蜜 后台系统！</h1>
-    <p class="myP">{{ nowDate }}</p>
+    <div class="content">
+      <h1 class="myH1"> 欢迎{{ username }}</h1>
+      <h1 class="myH1"> 来到 蜜雪冰城甜蜜蜜 后台系统！</h1>
+      <p class="myP">{{ nowDate }}</p>
+    </div>
   </div>
 </template>
 
@@ -58,24 +60,29 @@ export default {
 
 <style scoped>
 .myHome {
-  padding-top: 100px;
+  /*padding-top: 100px;*/
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   background: url("https://www.mxbc.com/media/upload/banner/1920x500-pc%E7%AB%AF%E4%BA%A7%E5%93%81%E5%B1%95%E7%A4%BA.jpg") no-repeat;
   background-size: cover;
+}
+.content{
+  height: 100%;
+  padding: 10px 0;
+  background: rgb(255,255,255,0.7);
 }
 
 .myH1 {
   font-size: 60px;
   text-align: center;
-  color: white;
-  background: #008FEF
+  color: 	#1E90FF;
+  /*background: #008FEF*/
 }
 
 .myP {
   text-align: center;
   font-size: 30px;
-  color: white;
-  background: #008FEF
+  color: 	#1E90FF;
+  /*background: #008FEF*/
 }
 </style>
