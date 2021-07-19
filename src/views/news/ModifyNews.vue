@@ -7,7 +7,7 @@
     <el-breadcrumb separator-class="el-icon-arrow-right" style="padding: 0 0 0 20px">
       <el-breadcrumb-item :to="{ path: '/index' }">首页</el-breadcrumb-item>
       <el-breadcrumb-item :to="{ path: '/news-list' }">新闻管理</el-breadcrumb-item>
-      <el-breadcrumb-item :to="{ path: '/news-update' }">添加新闻</el-breadcrumb-item>
+      <el-breadcrumb-item :to="{ path: '/news-update' }">修改新闻</el-breadcrumb-item>
     </el-breadcrumb>
     <el-divider></el-divider>
     <el-form ref="userForm" :model="newsForm" label-width="500px">
