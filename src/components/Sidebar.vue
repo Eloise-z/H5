@@ -27,9 +27,9 @@
         <el-submenu index="3">
           <template slot="title"><i class="el-icon-menu"></i>商品类别管理</template>
           <el-menu-item-group>
-            <el-menu-item index="3-1">商品类别列表</el-menu-item>
-            <el-menu-item index="3-2">添加商品类别</el-menu-item>
-            <el-menu-item index="3-3">修改商品类别</el-menu-item>
+            <el-menu-item index="3-1"  @click="$router.push('/type-list')">商品类别列表</el-menu-item>
+            <el-menu-item index="3-2"  @click="$router.push('/type-add')">添加商品类别</el-menu-item>
+            <el-menu-item index="3-3"  @click="$router.push('/type-detail')">商品类别详情</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="4">

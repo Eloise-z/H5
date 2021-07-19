@@ -32,6 +32,9 @@
           </el-dropdown-menu>
         </el-dropdown>
       </el-form-item>
+      <el-form-item label="备注">
+        <el-input type="textarea" v-model="orderForm.content" placeholder="按餐量提供餐具" disabled></el-input>
+      </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="modifyNews">修改</el-button>
         <el-button @click="$router.back()">取消</el-button>
