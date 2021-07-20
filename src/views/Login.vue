@@ -9,6 +9,7 @@
 <template>
   <div id="login">
     <div class="container">
+      <p class="headWord">蜜雪冰城甜蜜蜜 后台管理系统</p>
       <div class="loginBox">
         <div class="inputBox">
           <el-form :model="loginForm" :rules="loginRule" ref="loginForm" label-width="60px">
@@ -77,6 +78,9 @@ export default {
 </script>
 
 <style scoped>
+  p{
+    margin: 0;
+  }
 .container {
   background: url("https://www.mxbc.com/media/upload/index/%E8%9C%9C%E9%9B%AA%E5%86%B0%E5%9F%8Ebanner1920x900.jpg") no-repeat;
   background-size:cover;
@@ -95,5 +99,14 @@ export default {
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
 }
+
+  .headWord {
+    position: absolute;
+    top: 20%;
+    right: 60%;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
 
 </style>
