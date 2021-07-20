@@ -69,7 +69,7 @@ export default {
   created() {
     this.orderList = orderList
     if (this.$route.query.oid === '' || this.$route.query.oid === null || this.$route.query.oid === undefined) {
-      this.$message.warning('列表操作点击修改才能访问该页面！')
+      this.$message.warning('列表操作点击 查看详情 才能访问该页面！')
       this.$router.push('order-list')
     } else {
       this.orderForm.oid = this.$route.query.oid

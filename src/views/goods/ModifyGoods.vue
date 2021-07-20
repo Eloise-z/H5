@@ -79,7 +79,7 @@ export default {
   created() {
     this.goodsList = goodsList
     if (this.$route.query.gid === '' || this.$route.query.gid === null || this.$route.query.gid === undefined) {
-      this.$message.warning('列表操作点击修改才能访问该页面！')
+      this.$message.warning('列表操作点击 修改 才能访问该页面！')
       this.$router.push('goods-list')
     } else {
       this.goodsForm.gid = this.$route.query.gid

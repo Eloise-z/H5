@@ -57,7 +57,7 @@ export default {
   created() {
     this.typeList = typeList
     if (this.$route.query.tid === '' || this.$route.query.tid === null || this.$route.query.tid === undefined) {
-      this.$message.warning('列表操作点击修改才能访问该页面！')
+      this.$message.warning('列表操作点击 查看详情 才能访问该页面！')
       this.$router.push('type-list')
     } else {
       this.typeForm.tid = this.$route.query.tid

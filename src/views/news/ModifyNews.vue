@@ -66,7 +66,7 @@ export default {
   created() {
     this.newsList = localNewsList
     if (this.$route.query.nid === '' || this.$route.query.nid === null || this.$route.query.nid === undefined) {
-      this.$message.warning('列表操作点击修改才能访问该页面！')
+      this.$message.warning('列表操作点击 修改 才能访问该页面！')
       this.$router.push('news-list')
     } else {
       this.newsForm.nid = this.$route.query.nid

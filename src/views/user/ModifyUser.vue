@@ -95,7 +95,7 @@ export default {
   },
   created() {
     if (this.$route.query.uid === '' || this.$route.query.uid === null || this.$route.query.uid === undefined) {
-      Vue.prototype.$message.warning('列表操作点击修改才能访问该页面！')
+      Vue.prototype.$message.warning('列表操作点击 修改 才能访问该页面！')
       this.$router.push('user-list')
     } else {
       this.userForm.uid = this.$route.query.uid
