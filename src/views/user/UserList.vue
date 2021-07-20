@@ -198,8 +198,6 @@ export default {
   computed: {
     // 获取数据列表
     getDataList() {
-      console.log('computed');
-
       let res = []
       let index = 0
       let that = this
@@ -230,9 +228,7 @@ export default {
             index++
           }
       )
-      console.log(this.userList);
       this.queryList = this.userList
-      console.log(res);
       return res
     },
     totalData() {
@@ -262,7 +258,7 @@ export default {
       )
       // 得到要删除的id列表
       let deleteUidList = select === null || select === undefined ? selectList : select
-      if (deleteUidList.length === 0){
+      if (deleteUidList.length === 0) {
         this.$message.warning('请先选择要删除的用户！')
       }
       // 过滤得到删除后的源数据
