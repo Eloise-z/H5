@@ -83,7 +83,7 @@ export default {
   methods: {
     // 修改新闻
     modifyNews(modifyNid) {
-      this.$message.success('修改nid为：' + modifyNid + '的新闻')
+      this.$message.success('正在修改 ID 为：' + modifyNid + ' 的新闻')
       this.$router.push({path: '/news-update', query: {nid: modifyNid}})
     },
     // 删除新闻

@@ -277,6 +277,7 @@ export default {
       })
     },
     modifyUser(modifyUid) {
+      this.$message.success('正在修改 ID 为：' + modifyUid + ' 的用户')
       this.$router.push({path: '/user-update', query: {uid: modifyUid}})
     },
     genderFormat(scope) {
