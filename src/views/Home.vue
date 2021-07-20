@@ -66,23 +66,22 @@ export default {
   background: url("https://www.mxbc.com/media/upload/banner/1920x500-pc%E7%AB%AF%E4%BA%A7%E5%93%81%E5%B1%95%E7%A4%BA.jpg") no-repeat;
   background-size: cover;
 }
-.content{
+
+.content {
   height: 100%;
   padding: 10px 0;
-  background: rgb(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 .myH1 {
   font-size: 60px;
   text-align: center;
-  color: 	#1E90FF;
-  /*background: #008FEF*/
+  color: #1E90FF;
 }
 
 .myP {
   text-align: center;
   font-size: 30px;
-  color: 	#1E90FF;
-  /*background: #008FEF*/
+  color: #1E90FF;
 }
 </style>

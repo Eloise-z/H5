@@ -262,6 +262,9 @@ export default {
       )
       // 得到要删除的id列表
       let deleteUidList = select === null || select === undefined ? selectList : select
+      if (deleteUidList.length === 0){
+        this.$message.warning('请先选择要删除的用户！')
+      }
       // 过滤得到删除后的源数据
       this.userList = this.userList.filter(
           v => {
