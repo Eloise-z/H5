@@ -261,12 +261,20 @@ export default {
       if (deleteUidList.length === 0) {
         this.$message.warning('请先选择要删除的用户！')
       }
-      // 过滤得到删除后的源数据
-      this.userList = this.userList.filter(
-          v => {
-            return !deleteUidList.includes(v.uid)
-          }
-      )
+      this.$confirm(`确定对 【 用户ID = ${deleteUidList} 】 进行 【 ${select ? '删除' : '批量删除'} 】 操作?`, '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        // 过滤得到删除后的源数据
+        this.userList = this.userList.filter(
+            v => {
+              return !deleteUidList.includes(v.uid)
+            }
+        )
+        this.$message.success('删除了 ID 为：' + deleteUidList.toString() + ' 的用户')
+      }).catch(() => {
+      })
     },
     modifyUser(modifyUid) {
       this.$router.push({path: '/user-update', query: {uid: modifyUid}})

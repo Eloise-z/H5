@@ -95,13 +95,20 @@ export default {
       )
       // 得到要删除的id列表
       let deleteNidList = select === null || select === undefined ? selectList : select
-      // 过滤得到删除后的源数据
-      this.newsList = this.newsList.filter(
-          v => {
-            return !deleteNidList.includes(v.nid)
-          }
-      )
-      this.$message.success('删除了nid为：' + deleteNidList.toString() + '的新闻')
+      this.$confirm(`确定对 【 新闻ID = ${deleteNidList} 】 进行 【 ${select ? '删除' : '批量删除'} 】 操作?`, '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        // 过滤得到删除后的源数据
+        this.newsList = this.newsList.filter(
+            v => {
+              return !deleteNidList.includes(v.nid)
+            }
+        )
+        this.$message.success('删除了 ID 为：' + deleteNidList.toString() + '的新闻')
+      }).catch(() => {
+      })
     }
   }
 }
