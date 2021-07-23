@@ -127,7 +127,24 @@ export default {
         this.userForm.gender = 3
       }
       Vue.prototype.$message.success('修改成功！')
+      this.userForm.updateTime = this.getCurrentTime()
       this.$router.push('/user-list')
+    },
+    //获取当前系统时间
+    getCurrentTime() {
+      let date = new Date();
+      let year = date.getFullYear(); //年
+      let month = date.getMonth() + 1; //月
+      let data = date.getDate(); //天
+      let hours = date.getHours(); //小时
+      let minute = date.getMinutes(); //分
+      let second = date.getSeconds(); //秒
+      month = month < 10 ? '0' + month : month
+      data = data < 10 ? '0' + data : data
+      hours = hours < 10 ? '0' + hours : hours
+      minute = minute < 10 ? '0' + minute : minute
+      second = second < 10 ? '0' + second : second
+      return year + "-" + (month) + "-" + data + " " + hours + ":" + minute + ":" + second;
     }
   }
 }
