@@ -10,5 +10,6 @@ module.exports = {
             Popper: ['popper.js', 'default'],
             axios: 'axios'
         }])
-    }
+    },
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/'
 }
