@@ -11,5 +11,7 @@ module.exports = {
             axios: 'axios'
         }])
     },
-  publicPath: process.env.NODE_ENV === 'production' ? './' : '/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/h5ymsd/'
+    : '/'
 }
